@@ -1,17 +1,18 @@
 import React from 'react';
 import Animal from '../Animal';
 
-const AnimalList = ({animalData, handleGiveInformation}) => {
+const AnimalList = ({animalData, onChange}) => {
 
-    const handleInformation = () => {
-        handleGiveInformation()
-    }
+    const handleClickInformation = () => {
+        onChange()
+    };
 
     return(
     <>
-        <div className="zvirata" handleGiveCall={handleInformation}> 
 
-        {animalData.map( (animalAll, id) => <Animal key={id} nazev={animalAll.nazev} nazevLatinsky={animalAll.nazevLatinsky} domovina={animalAll.domovina} biotop={animalAll.biotop} potrava={animalAll.potrava} velikost={animalAll.velikost} popis={animalAll.popis} foto={animalAll.foto} zoo={animalAll.zoo} />)}
+        <div className="zvirata"> 
+
+        {animalData.map( (animalAll) => <Animal key={animalAll.id} id={animalAll.id} nazev={animalAll.nazev} nazevLatinsky={animalAll.nazevLatinsky} domovina={animalAll.domovina} biotop={animalAll.biotop} potrava={animalAll.potrava} velikost={animalAll.velikost} popis={animalAll.popis} foto={animalAll.foto} zoo={animalAll.zoo} animallistcall={handleClickInformation} /> ) }
 
         </div>
     </>

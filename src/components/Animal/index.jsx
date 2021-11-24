@@ -1,13 +1,16 @@
 import React from 'react';
+import './style.css';
 
-const Animal = ({foto, nazev, nazevLatinsky, handleGiveCall}) => {
+const Animal = ({foto, nazev, nazevLatinsky, id, animallistcall}) => {
 
     const handleClickAnimal = () => {
-        handleGiveCall()
-    }
+        animallistcall()
+    };
+
     return(
     <>
-        <div className="zvire" onClick={handleClickAnimal}>
+    
+        <div className="zvire" key={id} onClick={handleClickAnimal}>
             <div className="zvire__foto">
                 <img src={foto} alt={nazev} />
             </div>

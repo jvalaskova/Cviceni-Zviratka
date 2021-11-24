@@ -1,10 +1,12 @@
 import React from 'react';
+import './style.css';
 
 const AnimalDetail = (props) => {
 
     return(
     <>
-        <div className="detail">
+	{console.log(props)}
+        <div className="detail" >
 			<div className="detail__obsah">
 
 				<div className="detail__hlavicka">
