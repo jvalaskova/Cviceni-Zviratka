@@ -4,7 +4,7 @@ import Animal from '../Animal';
 const AnimalList = ({animalData, onChange}) => {
 
     const handleClickInformation = () => {
-        onChange()
+        onChange(id)
     };
 
     return(

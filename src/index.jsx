@@ -17,7 +17,7 @@ const App = () => {
 	);
 
   const handleFinal = () => {
-    setFinalDetail()
+    setFinalDetail(id)
   };
   
   return(
@@ -25,7 +25,7 @@ const App = () => {
     <h1>Zvířátka v ZOO</h1>
     <div className="container">
       <AnimalList animalData={changeAnimal} onChange={handleFinal} />
-      <AnimalDetail detail={finalDetail}  />
+      <AnimalDetail detail={changeAnimal[finalDetail]}  />
     </div>
     </>
   );
