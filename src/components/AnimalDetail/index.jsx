@@ -5,8 +5,9 @@ const AnimalDetail = (props) => {
 
     return(
     <>
-	{console.log(props)}
-        <div className="detail" >
+
+	
+        <div className="detail">
 			<div className="detail__obsah">
 
 				<div className="detail__hlavicka">

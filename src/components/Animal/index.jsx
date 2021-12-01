@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.css';
 
-const Animal = ({foto, nazev, nazevLatinsky, id, animallistcall}) => {
+const Animal = ({foto, nazev, nazevLatinsky, id, clickAnimal}) => {
 
-    const handleClickAnimal = () => {
-        animallistcall()
+    const handleClickAnimal = (id) => {
+            clickAnimal(id)
     };
 
     return(

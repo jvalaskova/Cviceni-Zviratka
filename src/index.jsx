@@ -6,26 +6,27 @@ import './style.css';
 
 const App = () => {
   
-  const [changeAnimal, setChangeAnimal] = useState([]);
+  const [seznamZvirat, setSeznamZvirat] = useState([]);
   const [finalDetail, setFinalDetail] = useState();
 
   useEffect(
 		() => {
-			fetch('https://lrolecek.github.io/zviratka-api/zvirata.json').then((response) => response.json()).then(data => {setChangeAnimal(data.zvirata)} )
+			fetch('https://lrolecek.github.io/zviratka-api/zvirata.json').then((response) => response.json()).then(data => {setSeznamZvirat(data.zvirata)} )
 		},
 		[]
 	);
 
-  const handleFinal = () => {
-    setFinalDetail(id)
+  const handleFinal = (id) => {
+    setFinalDetail(id-1),
+    console.log(id)
   };
   
   return(
     <>
     <h1>Zvířátka v ZOO</h1>
     <div className="container">
-      <AnimalList animalData={changeAnimal} onChange={handleFinal} />
-      <AnimalDetail detail={changeAnimal[finalDetail]}  />
+      <AnimalList animalData={seznamZvirat} onChangeDetail={handleFinal} />
+      {seznamZvirat !== [] && finalDetail ? <AnimalDetail detail={seznamZvirat[finalDetail]} /> : null}
     </div>
     </>
   );

@@ -1,10 +1,10 @@
 import React from 'react';
 import Animal from '../Animal';
 
-const AnimalList = ({animalData, onChange}) => {
+const AnimalList = ({animalData, onChangeDetail}) => {
 
-    const handleClickInformation = () => {
-        onChange(id)
+    const handleClickInformation = (id) => {
+        onChangeDetail(id)
     };
 
     return(
@@ -12,7 +12,7 @@ const AnimalList = ({animalData, onChange}) => {
 
         <div className="zvirata"> 
 
-        {animalData.map( (animalAll) => <Animal key={animalAll.id} id={animalAll.id} nazev={animalAll.nazev} nazevLatinsky={animalAll.nazevLatinsky} domovina={animalAll.domovina} biotop={animalAll.biotop} potrava={animalAll.potrava} velikost={animalAll.velikost} popis={animalAll.popis} foto={animalAll.foto} zoo={animalAll.zoo} animallistcall={handleClickInformation} /> ) }
+        {animalData.map( (animalAll) => <Animal key={animalAll.id} id={animalAll.id} nazev={animalAll.nazev} nazevLatinsky={animalAll.nazevLatinsky} foto={animalAll.foto} clickAnimal={handleClickInformation} /> ) }
 
         </div>
     </>
