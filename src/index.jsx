@@ -17,7 +17,7 @@ const App = () => {
 	);
 
   const handleFinal = (id) => {
-    setFinalDetail(id-1)
+    setFinalDetail(id)
   };
   
   return(
@@ -25,7 +25,7 @@ const App = () => {
     <h1>Zvířátka v ZOO</h1>
     <div className="container">
       <AnimalList animalData={seznamZvirat} onChangeDetail={handleFinal} />
-      {seznamZvirat !== [] && finalDetail ? <AnimalDetail detail={seznamZvirat[finalDetail]} /> : null}
+      {seznamZvirat !== [] && finalDetail ? <AnimalDetail detail={seznamZvirat[finalDetail-1]} /> : null}
     </div>
     </>
   );

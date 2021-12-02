@@ -1,7 +1,7 @@
 import React from 'react';
 import Animal from '../Animal';
 
-const AnimalList = ({animalData, id, onChangeDetail}) => {
+const AnimalList = ({animalData, onChangeDetail}) => {
 
 
     return(
