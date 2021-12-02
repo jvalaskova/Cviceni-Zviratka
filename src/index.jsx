@@ -17,8 +17,7 @@ const App = () => {
 	);
 
   const handleFinal = (id) => {
-    setFinalDetail(id-1),
-    console.log(id)
+    setFinalDetail(id-1)
   };
   
   return(
